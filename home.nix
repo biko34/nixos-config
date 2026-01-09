@@ -71,6 +71,7 @@
     netbird
     onlyoffice-desktopeditors
     feishin
+    lazygit
     
     
 

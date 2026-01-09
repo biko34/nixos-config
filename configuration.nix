@@ -21,6 +21,10 @@
 
   #netbird 
   services.netbird.enable = true;
+
+  #SSH
+  services.openssh.enable = true;
+  programs.ssh.startAgent = true;
  
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -126,6 +130,7 @@
   
   # Install firefox.
   programs.firefox.enable = true;
+  #steam
   programs.steam.enable = true;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
