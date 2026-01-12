@@ -23,6 +23,17 @@
   #     xxx
   # '';
 
+  # Gestionem les carpetes de configuració
+  home.file = {
+    # Ghostty: Enllacem la carpeta sencera
+    ".config/ghostty".source = ./dotfiles/ghostty;
+
+    # Fish: Enllacem la carpeta sencera
+    ".config/fish".source = ./dotfiles/fish;
+    ".config/starship.toml".source = config.lib.file.mkOutOfStoreSymlink /home/carlos/nixos-config/dotfiles/starship.toml;
+
+  };
+
   # set cursor size and dpi for 4k monitor
   xresources.properties = {
     "Xcursor.size" = 16;
@@ -74,6 +85,7 @@
     lazygit
     
     
+    
 
     # misc
     cowsay
@@ -122,14 +134,13 @@
 
   # starship - an customizable prompt for any shell
   programs.starship = {
-    enable = true;
+    
     # custom settings
-    settings = {
-      add_newline = false;
-      aws.disabled = true;
-      gcloud.disabled = true;
-      line_break.disabled = true;
-    };
+    # Això carrega el teu fitxer i el fusiona amb qualsevol altra opció
+    enable = true;
+    # IMPORTANT: El './' indica que el fitxer està dins de la carpeta del Flake
+    
+    
   };
 
   # alacritty - a cross-platform, GPU-accelerated terminal emulator
@@ -167,6 +178,7 @@
   # configuration is compatible with. This helps avoid breakage
   # when a new home Manager release introduces backwards
   # incompatible changes.
+
   #
   # You can update home Manager without changing this value. See
   # the home Manager release notes for a list of state version
