@@ -7,3 +7,4 @@ alias netejar5="sudo nix-env --profile /nix/var/nix/profiles/system --delete-gen
 alias nupdate="cd ~/nixos-conf && nix flake update && nrs"
 starship init fish | source
 set -U fish_greeting 
+nitch

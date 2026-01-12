@@ -83,6 +83,7 @@
     onlyoffice-desktopeditors
     feishin
     lazygit
+    nitch
     
     
     
